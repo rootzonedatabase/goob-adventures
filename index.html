@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goob adventures: find carrot</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <style>
+        .center {
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            width: 50%;
+        }
+
+        .cookie-regular {
+            font-family: "Cookie", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        button {
+           background-color: rgb(255, 139, 247);
+           border-radius: 0.5rem;
+           border-width: 0px;
+           color: white;
+           padding: 20px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           font-size: large;
+           cursor: pointer;
+        }
+
+        .nm {
+            display: none;
+        }
+
+        .topbar {
+            color: rgb(255, 139, 247);
+            font-size: large;
+        }
+    </style>
+
+    <script>
+        function to(f,t) {
+            document.getElementById('slide-' + f).style.display = 'none';
+            document.getElementById('slide-' + t).style.display = 'block';
+        }
+
+        function check_and_regret() {
+            var doeslike = document.getElementById('likecarot').checked
+            var doeseat = document.getElementById('eatcarot').checked
+            var is = document.getElementById('iscarot').checked
+
+            if (is) {
+                alert('youre no bun youre carrot !');
+                to('verification','start');
+                return;
+            }
+
+            if (!is && doeslike && doeseat) {
+                to('verification','yesbuncontinue');
+                return;
+            }
+
+            alert('NOT BUN !!');
+            to('verification','start');
+        }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="topbar center">
+            <h1>goob adventures !!!!</h1>
+        </div>
+
+       <div class="titlecard center" id="slide-start">
+            <h2>find the carrot</h2>
+            <h3>reference image: 🥕</h3>
+
+            <button onclick="to('start','verification')">begin</button>
+       </div>
+
+       <div class="titlecard center nm" id="slide-verification">
+        <h2>answer these questions first:</h2>
+        <h3>to verify if bun</h3>
+
+        check the following if true:
+
+        <br>
+        <br>
+
+        <div class="inp-wrap">
+            <input type="checkbox" id="likecarot" name="likecarot" value="likecarot"> i like carrots
+        </div>
+
+        <div class="inp-wrap">
+            <input type="checkbox" id="eatcarot" name="eatcarot" value="eatcarot"> i eat carrots
+        </div>
+
+        <div class="inp-wrap">
+            <input type="checkbox" id="iscarot" name="iscarot" value="iscarot"> im carrot
+        </div>
+
+        <br>
+        <br>
+
+        <button onclick="check_and_regret();">continue</button>
+        </div>
+    </div>
+
+    <div class="titlecard center nm" id="slide-yesbuncontinue">
+        <h2>you are bun !!</h2>
+        <h3>reference image: 🐇</h3>
+
+        <button onclick="to('yesbuncontinue','carot')">continue to important bun mission</button>
+   </div>
+
+   <div class="titlecard center nm" id="slide-carot">
+    <h2>you are stuck on a toropcail isalnd</h2>
+    <h2>.....</h2>
+    <h2>ALONE</h2>
+    <h2>🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀🙀</h2>
+    <h2>and you need to find carot !!</h2>
+
+    <button onclick="to('carot','loading')">next</button>
+</div>
+<div class="titlecard center nm" id="slide-loading">
+    redirecting ...
+    <a href="./part2.html">too much effort to actually automatically redirect with javascript so click here thank</a>
+</div>
+</body>
+</html>
