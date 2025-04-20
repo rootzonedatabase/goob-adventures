@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goob adventures: find carrot (p2)</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <style>
+        .center {
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            width: 50%;
+        }
+
+        .cookie-regular {
+            font-family: "Cookie", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+
+        button {
+           background-color: rgb(255, 139, 247);
+           border-radius: 0.5rem;
+           border-width: 0px;
+           color: white;
+           padding: 20px;
+           padding-top: 10px;
+           padding-bottom: 10px;
+           font-size: large;
+           cursor: pointer;
+        }
+
+        .nm {
+            display: none;
+        }
+
+        .topbar {
+            color: rgb(255, 139, 247);
+            font-size: large;
+        }
+
+        .rainbow {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+    </style>
+
+    <script>
+        function to(f,t) {
+            document.getElementById('slide-' + f).style.display = 'none';
+            document.getElementById('slide-' + t).style.display = 'block';
+        }
+
+        function check_and_regret() {
+            var doeslike = document.getElementById('likecarot').checked
+            var doeseat = document.getElementById('eatcarot').checked
+            var is = document.getElementById('iscarot').checked
+
+            if (is) {
+                alert('youre no bun youre carrot !');
+                to('verification','start');
+                return;
+            }
+
+            if (!is && doeslike && doeseat) {
+                to('verification','yesbuncontinue');
+                return;
+            }
+
+            alert('NOT BUN !!');
+            to('verification','start');
+        }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div class="topbar center">
+            <h1>goob adventures !!!!</h1>
+        </div>
+
+       <div class="titlecard center" id="slide-start">
+            <h2>find the carrot (part 2)</h2>
+            <h3>reference image: 🥕</h3>
+
+            <button onclick="to('start','firstq')">continue</button>
+       </div>
+
+    </div>
+
+    <div class="titlecard center nm" id="slide-firstq">
+        <h2>you are eeping</h2>
+
+        <h4>dreaming of carrots,,,,,,...</h4>
+
+        <button onclick="to('firstq','wake')">wake up</button>
+        <button onclick="to('firstq','eeper')">keep eeping</button>
+   </div>
+
+   <div class="titlecard center nm" id="slide-eeper">
+    <h2>you are eeping .. stilllll</h2>
+
+    <h4>dreaming of carrots,,,,,,...</h4>
+    <h3>🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3>🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3>🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3>🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3>🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h4>its been hoursssss ....</h4>
+
+    <button onclick="to('firstq','wake')">wake up</button>
+    <button onclick="to('eeper','eeper2')">keep eeping</button>
+</div>
+<div class="titlecard center nm" id="slide-eeper2">
+    <h2>you are eeping .. stilllllllllllllllllllllllllllllllllllllllll</h2>
+
+    <h4 class="rainbow rainbow_text_animated">dreaming of carrots,,,,,,...</h4>
+    <h3 class="rainbow rainbow_text_animated">🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3 class="rainbow rainbow_text_animated">🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3 class="rainbow rainbow_text_animated">🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3 class="rainbow rainbow_text_animated">🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h3 class="rainbow rainbow_text_animated">🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
+    <h4>its been daysss ....</h4>
+
+    <button onclick="to('firstq','wake')">wake up</button>
+    <button onclick="to('eeper2','eeper3')">keep eeping</button>
+</div>
+<div class="titlecard center nm" id="slide-eeper3">
+    <h2>you are eeping .. forever</h2>
+    <h4>its been years ....</h4>
+    <h4>rest in carrots .... :cc</h4>
+
+    <button onclick="to('eeper3','wake')">use bun technology inc. corp. llc. ltd. ® to wake up</button>
+</div>
+<div class="titlecard center nm" id="slide-wake">
+    <h2>yaaaaawwwwnnnn</h2>
+    <h2>streeeeetchhh</h2>
+    <h2>hop hop</h2>
+    
+    <button onclick="to('wake','woke')">continue</button>
+</div>
+
+<div class="titlecard center nm" id="slide-woke">
+    <h2>RUMMBBLLEEEE</h2>
+    <h2>goob hungry</h2>
+    <h2>goob needs FOOD, ,,, carrot</h2>
+    
+    <button onclick="to('woke','brave')">leave safe spot</button>
+</div>
+</body>
+</html>
