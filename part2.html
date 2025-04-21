@@ -30,7 +30,7 @@
            background-color: rgb(255, 139, 247);
            border-radius: 0.5rem;
            border-width: 0px;
-           color: white;
+           color: yellow;
            padding: 20px;
            padding-top: 10px;
            padding-bottom: 10px;
@@ -198,7 +198,7 @@
     <button onclick="to('search2','search-cave')">check cave</button>
     <button onclick="to('search2','search-tree')">check tree</button>
     <button onclick="to('search2','search-igloo')">check igloo</button>
-    <button onclick="to('search2','ieep')">check beach</button>
+    <button onclick="to('search2','search-beach')">check beach</button>
 </div>
 
 <div class="titlecard center nm" id="slide-search-cave">
@@ -329,7 +329,7 @@
 <div class="titlecard center nm" id="slide-search-beach2">
     <h2>hop hop hop hop hop hop</h2>
     
-    <button onclick="to('search-beach2','search-beach2')">search beach for carrots</button>
+    <button onclick="to('search-beach2','search-beach3')">search beach for carrots</button>
     <button onclick="to('search-beach2','search-beach-sand')">run along sandy beach</button>
 </div>
 
@@ -350,9 +350,15 @@
     <h2>hop hop hop hop hop hop</h2>
     <h2>hop hop hop hop hop hop</h2>
     
-    <button onclick="to('search-beach2','search-beach2')">search beach for carrots</button>
+    <button onclick="to('search-beach-sand','search-beach2')">search beach for carrots</button>
+    <button onclick="to('search-beach-sand','start')">self destruct</button>
 </div>
 
+<div class="titlecard center nm" id="slide-search-beach3">
+    <h2>hop hop hop hop hop hop sniff sniff</h2>
+    
+    <button onclick="to('search-beach3','search-beach4')">next</button>
+</div>
 
 
 
