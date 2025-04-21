@@ -73,6 +73,7 @@
             var doeseat = document.getElementById('eatcarot').checked
             var hop = document.getElementById('hop').checked
             var is = document.getElementById('iscarot').checked
+            var password = document.getElementById('password').value
 
             if (is) {
                 alert('youre no bun youre carrot !');
@@ -80,7 +81,7 @@
                 return;
             }
 
-            if (!is && doeslike && doeseat && hop) {
+            if (!is && doeslike && doeseat && hop && (password == "carrot" || password == "bun" || password == 'ily')) {
                 to('verification','yesbuncontinue');
                 return;
             }
@@ -128,8 +129,10 @@
             <input type="checkbox" id="iscarot" name="iscarot" value="iscarot"> im carrot
         </div>
 
-        <br>
-        <br>
+        <br><br>
+        <h3>input bun secret password</h3> <input type="password" id="password" name="password" value="">
+        <br><br>
+        <br><br>
 
         <button onclick="check_and_regret();">continue</button>
         </div>
