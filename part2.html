@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>goob adventures: find carrot (p2)</title>
 
+    <meta name="robots" content="noindex">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
@@ -134,7 +136,7 @@
     <h3>🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕🥕</h3>
     <h4>its been hoursssss ....</h4>
 
-    <button onclick="to('firstq','wake')">wake up</button>
+    <button onclick="to('eeper','wake')">wake up</button>
     <button onclick="to('eeper','eeper2')">keep eeping</button>
 </div>
 <div class="titlecard center nm" id="slide-eeper2">
@@ -195,7 +197,7 @@
     
     <button onclick="to('search2','search-cave')">check cave</button>
     <button onclick="to('search2','search-tree')">check tree</button>
-    <button onclick="to('search2','ieep')">check igloo</button>
+    <button onclick="to('search2','search-igloo')">check igloo</button>
     <button onclick="to('search2','ieep')">check beach</button>
 </div>
 
@@ -241,6 +243,7 @@
     
     <button onclick="to('search-cave4','search-cave-run')">run out of cave</button>
     <button onclick="to('search-cave4','search-cave-pat')">pat</button>
+    <button onclick="to('search-cave4','search-cave-attack')">attack</button>
 </div>
 
 <div class="titlecard center nm" id="slide-search-cave-pat">
@@ -251,6 +254,15 @@
     <h2>awww</h2>
     
     <button onclick="to('search-cave-pat','search2')">exit cave</button>
+    <button onclick="to('search-cave-pat','search-cave-attack')">attack</button>
+</div>
+
+<div class="titlecard center nm" id="slide-search-cave-attack">
+    <h2>WHAT !!!!??????</h2>
+    <h2>you MEANY why would you even CLICK that</h2>
+    <h2>no !!!! not happening !!!</h2>
+    
+    <button onclick="to('search-cave4','search-cave4')">back</button>
 </div>
 
 <div class="titlecard center nm" id="slide-search-tree">
@@ -264,6 +276,64 @@
     
     <button onclick="to('search-tree-2','search')">back</button>
 </div>
+
+<div class="titlecard center nm" id="slide-search-igloo">
+    <h2>goob starts searching the igloo ..</h2>
+    
+    <button onclick="to('search-igloo','search-igloo2')">next</button>
+</div>
+
+<div class="titlecard center nm" id="slide-search-igloo2">
+    <h2>wait .. why would there be an igloo on a tropical island ?????</h2>
+    <h2>trap !! AAAAAAAAAA</h2>
+    
+    <button onclick="to('search-igloo2','search-igloo3')">next</button>
+</div>
+
+<div class="titlecard center nm" id="slide-search-igloo3">
+    <h2>goob faints from FEAR or exhaustion idk</h2>
+    <h2>annnnddd ...</h2>
+    
+    <button onclick="to('search-igloo3','search-igloo4')">next</button>
+</div>
+
+<div class="titlecard center nm" id="slide-search-igloo4">
+    <h2>goob wakes up .. with no igloo there </h2>
+    <h2>?????</h2>
+    <h2>was it even there in the first place ?? was it alll a dreaammm</h2>
+    
+    <button onclick="to('search-igloo4','search-igloo5')">next</button>
+</div>
+
+<div class="titlecard center nm" id="slide-search-igloo5">
+    <h2>goob is still hungryyyyyyy</h2>
+    
+    <button onclick="to('search-igloo5','search')">continue searching</button>
+    <button onclick="to('search-igloo5','cry')">cry</button>
+</div>
+
+<div class="titlecard center nm" id="cry">
+    <h2>nonono</h2>
+    <h2>get upppppppppppp</h2>
+    <h2>goob is safeeee</h2> <h5>for now ..</h5>
+    
+    <button onclick="to('cry','search')">continue searching</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="titlecard center nm" id="slide-ieep">
     <h2>uh ohhh !!</h2>
